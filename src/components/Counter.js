@@ -6,7 +6,11 @@ const Counter = () => {
   return (
     <main className={classes.counter}>
       <h1>Счётчик</h1>
-      <div className={classes.value}>{ counter }</div>
+      <div className={classes.value}>{counter}</div>
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
       <button onClick={toggleCounterHandler}>Спрятать / Показать</button>
     </main>
   ) 
