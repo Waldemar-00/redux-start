@@ -14,11 +14,3 @@ function reducer(state = { counter: 0 }, action) {
 }
 const store = legacy_createStore(reducer)
 export default store
-// function output() {
-  // console.log(store.getState())
-// }
-// store.subscribe(output)
-// store.dispatch({type: 'increment'})
-// store.dispatch({type: 'increment'})
-// store.dispatch({type: 'increment'})
-// store.dispatch({type: 'decrement'})
