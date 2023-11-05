@@ -12,8 +12,8 @@ const Counter = () => {
       <h1>Счётчик</h1>
       <div className={classes.value}>{counter}</div>
       <div>
-        <button onClick={() => changeCounter('increment')}>+</button>
-        <button onClick={() => changeCounter('decrement')}>-</button>
+        <button onClick={() => changeCounter('INCREMENT')}>+</button>
+        <button onClick={() => changeCounter('DECREMENT')}>-</button>
       </div>
       <button onClick={toggleCounterHandler}>Спрятать / Показать</button>
     </main>
