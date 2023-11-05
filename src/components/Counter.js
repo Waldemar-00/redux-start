@@ -12,9 +12,10 @@ const Counter = () => {
       <h1>Счётчик</h1>
       <div className={classes.value}>{counter}</div>
       <div>
-        <button onClick={() => changeCounter('INCREMENT')}>+1</button>
-        <button onClick={() => changeCounter('MORE_THEN_ONE', 7)}>+7</button>
-        <button onClick={() => changeCounter('DECREMENT')}>-1</button>
+        <button onClick={() => changeCounter('CHANGE_VALUE', 1)}>+1</button>
+        <button onClick={() => changeCounter('CHANGE_VALUE', 7)}>+7</button>
+        <button onClick={() => changeCounter('CHANGE_VALUE', -1)}>-1</button>
+        <button onClick={() => changeCounter('CHANGE_VALUE', -7)}>-7</button>
       </div>
       <button onClick={toggleCounterHandler}>Спрятать / Показать</button>
     </main>
