@@ -4,14 +4,8 @@ const counterSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    increment(state) {
-      state.counter++
-    },
-    decrement(state) {
-      state.counter--
-    },
-    increase(state, action) {
-      state.counter = state.counter + action.payload
+    changeCounter(state, action) {
+      state.counter += action.payload
     },
     setVisibleCounter(state) {
       state.isVisibleCounter = !state.isVisibleCounter

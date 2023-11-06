@@ -4,16 +4,9 @@ import { toolkitActions }   from "./store/index"
 const NewCounter = () => {
   const counter = useSelector(state => state.counter)
   const isVisibleCounter = useSelector(state => state.isVisibleCounter)
-  console.log(counter, isVisibleCounter)
   const dispatch = useDispatch()
-  function incrementHandler() {
-    dispatch(toolkitActions.increment())
-  }
-  function decrementHandler() {
-    dispatch(toolkitActions.decrement())
-  }
-  function increaseHandler(payload) {
-    dispatch(toolkitActions.increase(payload))
+  function changeCounterHandler(payload) {
+    dispatch(toolkitActions.changeCounter(payload))
   }
   function setVisibleCounter() {
     dispatch(toolkitActions.setVisibleCounter())
@@ -28,10 +21,10 @@ const NewCounter = () => {
       {
         isVisibleCounter &&
         <div>
-            <button onClick={incrementHandler}>+1</button>
-            <button onClick={() => increaseHandler(7)}>+7</button>
-            <button onClick={decrementHandler}>-1</button>
-            <button onClick={() => increaseHandler(-7)}>-7</button>
+            <button onClick={() => changeCounterHandler(1)}>+1</button>
+            <button onClick={() => changeCounterHandler(7)}>+7</button>
+            <button onClick={() => changeCounterHandler(-1)}>-1</button>
+            <button onClick={() => changeCounterHandler(-7)}>-7</button>
         </div>
       }
       <button onClick={ setVisibleCounter }>Toggle Counter</button>
