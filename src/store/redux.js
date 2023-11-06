@@ -3,12 +3,12 @@ function reducer(state = { counter: 0, isVisibleCounter: false }, action) {
   switch (action.type) {
     case 'CHANGE_VALUE':
       return {
+        ...state,
         counter: state.counter + action.payload,
-        isVisibleCounter: true
       }
     case 'TOGGLE': 
       return {
-        counter: state.counter,
+        ...state,
         isVisibleCounter: state.isVisibleCounter = action.payload
       }
     default: return state

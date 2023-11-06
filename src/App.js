@@ -1,8 +1,8 @@
-import Counter from "./components/Counter" 
+import NewCounter from "./components/toolkit/NewCounter" 
 function App() {
   return (
     <div>
-      <Counter />
+      <NewCounter />
     </div>
   ) 
 }
