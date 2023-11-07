@@ -1,15 +1,15 @@
 import classes from "./Counter.module.css"
 import { useSelector, useDispatch } from 'react-redux'
-import { toolkitActions }   from "./store/index"
-const NewCounter = () => {
-  const counter = useSelector(state => state.counter)
-  const isVisibleCounter = useSelector(state => state.isVisibleCounter)
+import { counterActions }   from "./store/index"
+const Counter = () => {
+  const counter = useSelector(state => state.counterReducer.counter)
+  const isVisibleCounter = useSelector(state => state.counterReducer.isVisibleCounter)
   const dispatch = useDispatch()
   function changeCounterHandler(payload) {
-    dispatch(toolkitActions.changeCounter(payload))
+    dispatch(counterActions.changeCounter(payload))
   }
   function setVisibleCounter() {
-    dispatch(toolkitActions.setVisibleCounter())
+    dispatch(counterActions.setVisibleCounter())
   }
   return (
     <main className={classes.counter}>
@@ -32,4 +32,4 @@ const NewCounter = () => {
   )
 }
 
-export default NewCounter 
+export default Counter 
