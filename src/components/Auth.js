@@ -23,7 +23,7 @@ const Auth = () => {
           </div>
           <div className={classes.control}>
             <label htmlFor="password">Пароль</label>
-            <input type="password" id="password" />
+              <input type="password" id="password" minLength="9" required />
           </div>
           <button>Войти</button>
         </form>

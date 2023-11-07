@@ -23,13 +23,15 @@ const Header = () => {
           </li>
           {
             isProFile &&
+            <>
             <li>
               <a href="/">Профиль</a>
             </li>
+            <li>
+              <button onClick={getOut}>Выйти</button>
+            </li>
+            </>
           }
-          <li>
-            <button onClick={getOut}>Выйти</button>
-          </li>
         </ul>
       </nav>
     </header>
