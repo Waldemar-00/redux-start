@@ -1,6 +1,6 @@
 import classes from "./Header.module.css" 
 import { useSelector, useDispatch } from 'react-redux'
-import { userActions } from "./toolkit/store/index"
+import { userActions } from "./toolkit/store/logged"
 const Header = () => {
   const isProFile = useSelector(state => state.userReducer.isLoggedIn)
   const dispatch = useDispatch()

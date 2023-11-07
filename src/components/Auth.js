@@ -1,6 +1,6 @@
 import classes from "./Auth.module.css" 
 import { useSelector, useDispatch } from 'react-redux'
-import { userActions } from "./toolkit/store/index"
+import { userActions } from "./toolkit/store/logged"
 const Auth = () => {
   const isLoggedIn = useSelector(state => state.userReducer.isLoggedIn)
   const dispatch = useDispatch()
@@ -19,11 +19,15 @@ const Auth = () => {
         <form onSubmit={(e) => submitForm(e)}>
           <div className={classes.control}>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" />
+              <input type="email" id="email" required />
           </div>
           <div className={classes.control}>
             <label htmlFor="password">Пароль</label>
-              <input type="password" id="password" minLength="9" required />
+              <input type="password" id="password"
+                minLength="9"
+                current-password='true'
+                new-password='true'
+                required />
           </div>
           <button>Войти</button>
         </form>
